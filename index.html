@@ -5,20 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TODOリスト</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+
   <main class="todo-app">
     <h1>TODOリスト</h1>
+
     <form id="todo-form" class="todo-form">
       <input id="todo-input" type="text" placeholder="新しいタスクを追加" autocomplete="off">
       <button type="submit">追加</button>
     </form>
-    <button id="clear-completed" class="clear-completed">クリア</button>
+
+    
+    <div class = "filter-buttons">
+      <button id="clear-completed" class="clear-completed">全削除</button>
+      <button id="show-all" class="show-all">すべて</button>
+      <button id="show-completed" class="show-completed">完了</button>
+      <button id="show-active" class="show-active">未完了</button>
+    </div>
+
     <section class="todo-list-section">
+      <div id="count-list" class="count-list"></div>
       <ul id="todo-list" class="todo-list"></ul>
       <p id="empty-message" class="empty-message">まだタスクがありません。</p>
     </section>
+
   </main>
-  <script src="script.js"></script>
+  
 </body>
 </html>
